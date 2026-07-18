@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    padding: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-image: url("background.jfif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    width: 900px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.75);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+    text-align: center;
+    font-size: 42px;
+    color: #c62828;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+h1 {
+    display: inline-block;
+    background: #c62828;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.container {
+    text-align: center;
+}
+
+.subtitle {
+    text-align: center;
+    color: rgb(167, 34, 87);
+    margin-bottom: 25px;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+input,
+select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background: #c62828;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #a00000;
+}
+
+.search {
+    margin-bottom: 20px;
+}
+
+.search input {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: #c62828;
+    color: white;
+    padding: 12px;
+}
+
+td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.deleteBtn {
+    background: #ff4d4d;
+}
+
+.deleteBtn:hover {
+    background: #d32f2f;
+}

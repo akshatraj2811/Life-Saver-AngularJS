@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html ng-app="lifeSaverApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Life Saver</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body ng-controller="LifeSaverController">
+
+    <div class="container">
+
+        <h1>Life Saver</h1>
+        <h3>
+            <p class="subtitle">Connecting Donors, Saving Lives</p>
+        </h3>
+
+        <div class="form">
+
+            <input type="text" placeholder="Enter Name" ng-model="donor.name">
+
+            <input type="text" placeholder="Enter City" ng-model="donor.city">
+
+            <select ng-model="donor.bloodGroup">
+                <option value="">Select Blood Group</option>
+                <option>A+</option>
+                <option>A-</option>
+                <option>B+</option>
+                <option>B-</option>
+                <option>AB+</option>
+                <option>AB-</option>
+                <option>O+</option>
+                <option>O-</option>
+            </select>
+
+            <input type="text" placeholder="Phone Number" ng-model="donor.phone">
+
+            <button ng-click="addDonor()">Add Donor</button>
+
+        </div>
+
+        <div class="search">
+
+            <input type="text" placeholder="Search Donor" ng-model="searchText">
+
+        </div>
+
+        <table>
+
+            <tr>
+                <th>Name</th>
+                <th>City</th>
+                <th>Blood Group</th>
+                <th>Phone</th>
+                <th>Action</th>
+            </tr>
+
+            <tr ng-repeat="d in donors | filter:searchText">
+
+                <td>{{d.name}}</td>
+                <td>{{d.city}}</td>
+                <td>{{d.bloodGroup}}</td>
+                <td>{{d.phone}}</td>
+
+                <td>
+                    <button class="deleteBtn" ng-click="deleteDonor($index)">
+                        Delete
+                    </button>
+                </td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+</body>
+
+</html>
